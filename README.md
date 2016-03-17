@@ -1,6 +1,6 @@
 #Progress NEXT NativeScript
 
-Please execute the following command initialize NativeScript platform:
+Please execute the following command in order to initialize NativeScript platform:
 
-  tns platform add ios
-  tns platform add android
+    tns platform add ios
+    tns platform add android
