@@ -1,0 +1,55 @@
+﻿.title {
+    font-size: 30;
+    horizontal-align: center;
+    margin: 20;
+}
+
+button {
+    font-size: 42;
+    horizontal-align: center;
+}
+
+.message {
+    font-size: 20;
+    color: #284848;
+    horizontal-align: center;
+}
+
+.drawerMenuContent {
+    margin:10;
+}
+
+.mainContent{
+    background-color: white;
+}
+
+.drawerContent {
+    background-color: #F2F2F2;
+}
+
+.headerContent {
+    padding:20;
+    padding-left: 10;
+}
+.example-title{
+    color: #555555;
+    font-size: 17;
+    margin: 0;
+    padding: 10;
+}
+
+.control-title{
+    color: #FFFFFF;
+    background-color: #284848;
+    font-size: 22;
+    margin: 0;
+    padding: 5;
+}
+
+.example-group-title{
+    color: #555555;
+    background-color: #808080;
+    font-size: 20;
+    margin: 0;
+    padding: 5;
+}
