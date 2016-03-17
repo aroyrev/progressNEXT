@@ -1,0 +1,9 @@
+{
+  "CordovaPluginVariables": {
+    "com.telerik.plugin.telerikanalytics": {
+      "AUTO_TRACK_EXCEPTIONS": "True",
+      "AUTO_TRACK_KENDO_EVENTS": "False",
+      "PRODUCT_ID": "ab613235d36f48f9b4ec41e1acf429b3"
+    }
+  }
+}

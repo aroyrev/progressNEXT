@@ -1,0 +1,66 @@
+{
+  "ProjectName": "ProgressNEXT-hybrid",
+  "ProjectGuid": "{2aa46315-ff2d-45a9-b693-109dd86d79f0}",
+  "projectVersion": 1,
+  "AppIdentifier": "com.progress.ProgressNEXT",
+  "DisplayName": "ProgressNEXT",
+  "Author": "Progress",
+  "Description": "ProgressNEXT Conference App",
+  "BundleVersion": "1.3.4",
+  "AndroidVersionCode": "103048",
+  "iOSDeviceFamily": [
+    "1"
+  ],
+  "iOSBackgroundMode": [],
+  "ProjectTypeGuids": "{070BCB52-5A75-4F8C-A973-144AF0EAFCC9}",
+  "FrameworkVersion": "5.0.0",
+  "AndroidPermissions": [
+    "android.permission.INTERNET"
+  ],
+  "DeviceOrientations": [
+    "Portrait"
+  ],
+  "AndroidHardwareAcceleration": "True",
+  "iOSStatusBarStyle": "Default",
+  "Framework": "Cordova",
+  "WP8TileTitle": "",
+  "WP8Publisher": "",
+  "WP8Capabilities": [
+    "ID_CAP_CONTACTS",
+    "ID_CAP_NETWORKING",
+    "ID_CAP_PUSH_NOTIFICATION",
+    "ID_CAP_WEBBROWSERCOMPONENT"
+  ],
+  "WP8Requirements": [],
+  "WP8PublisherID": "{5b3549a1-4aaa-4836-ad4c-331cf8005775}",
+  "WP8ProductID": "{6c9b383a-74d9-4500-8540-b1926f66e54d}",
+  "WPSdk": "8.0",
+  "WP8PackageIdentityName": "1234Telerik.com.telerik.ProgressNEXThybrid",
+  "WP8WindowsPublisherName": "CN=Telerik",
+  "WP8SupportedResolutions": [
+    "ID_RESOLUTION_WVGA",
+    "ID_RESOLUTION_WXGA",
+    "ID_RESOLUTION_HD720P"
+  ],
+  "CorePlugins": [
+  "com.phonegap.plugins.barcodescanner@2.0.0",
+  "com.phonegap.plugins.PushPlugin@3.0.6",
+  "cordova-plugin-camera",
+  "cordova-plugin-console",
+  "cordova-plugin-contacts",
+  "cordova-plugin-device",
+  "cordova-plugin-dialogs",
+  "cordova-plugin-file",
+  "cordova-plugin-file-transfer",
+  "cordova-plugin-geolocation",
+  "cordova-plugin-globalization",
+  "cordova-plugin-inappbrowser",
+  "cordova-plugin-network-information",
+  "cordova-plugin-splashscreen",
+  "cordova-plugin-statusbar",
+  "cordova-plugin-vibration",
+  "cordova-plugin-whitelist",
+  "de.appplant.cordova.plugin.email-composer@0.8.2.1",
+  "nl.x-services.plugins.socialsharing@5.0.6"
+  ]
+}

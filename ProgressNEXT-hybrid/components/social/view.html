@@ -1,0 +1,45 @@
+<div data-role="view" data-title="Social" data-layout="main-tweet" data-model="app.social" data-show="app.social.onShow" data-after-show="app.social.afterShow">
+
+	<h2 class="h2-header" data-bind="text:model.Title" ></h2>
+
+	<div id="tweetList">
+
+    </div>
+
+    <!-- START_CUSTOM_CODE_dataList -->
+    <!-- END_CUSTOM_CODE_dataList -->
+    <script type="text/x-kendo-template" id="tweetListTemplate">
+    		<div style="padding-left:10px;margin-top:5px;">
+	    		<div style="display:table-cell;float:left;">
+		    		<img src="#: data['ProfileImageUrl'] #" alt="logo" border="1" style="border-color:lightgray"/>
+		       	</div>
+		       	<div style="display:table-cell;margin-top;0px;">
+		        	<h3 style="margin-bottom:0px;font-weight:700;margin-top:3px;">#: data['Name'] # </h3>
+		        	<p style="font-size:11px;margin-top:2px;color:darkgray;">@#:data['ScreenName']#</p>
+		        </div>
+	        </div>
+
+	        <p id="#: generateId(app.social.model.Tag) #">#= formatText(app.social.model.Tag, data['Text']) #</p>
+
+        	# if (data['Media'] && data['Media'].length > 0) { #
+
+        		<img src="#: data['Media'][0].media_url #" alt="img"  style="width:100%;padding:15px;padding-top:0px;height:auto"/>
+
+        	#}#
+
+
+    </script>
+
+    <script type="text/javascript">
+		function generateId(tag){
+    		return tag.replace("#", "");
+    	}
+    	function formatText(tag, content){
+    		var regExp = new RegExp(tag, "ig");
+    		return content.replace(regExp, "<span style=\"background-color:#f4f4f4;padding:0px;\">" + tag.substr(0, 2).toUpperCase() + tag.substr(2, tag.length) + "</span>");
+    	}
+
+    </script>
+
+
+</div>

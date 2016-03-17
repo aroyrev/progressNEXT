@@ -1,0 +1,25 @@
+<div data-role="view" data-title="Things To Do" data-layout="main" data-model="app.thingsToDo" data-show="app.thingsToDo.onShow" data-after-show="app.thingsToDo.afterShow">
+    <!-- START_CUSTOM_CODE_thingsToDo -->
+    
+    <h2 class="h2-header">
+        Things To Do
+    </h2>
+    
+    <div id="todoList" class="todo">
+
+    </div>
+
+    <!-- START_CUSTOM_CODE_dataList -->
+    <!-- END_CUSTOM_CODE_dataList -->
+    <script type="text/x-kendo-template" id="todoListTemplate">
+            <img src="#: app.getImageURI(data['Image']) #" alt="logo" style="padding-left:15px;width:100%"/>
+            
+            <div class="right">
+                <h2 style="margin-bottom:10px;margin-top:10px;">#: data['Title'] #</h2>
+             </div>
+            
+            <p style="margin-top:0px;">#: data['Description'] #</p>
+            <p style="text-decoration:underline;">Tap to More</p>
+    </script>
+    
+</div>

@@ -1,0 +1,90 @@
+<div data-role="view" data-title="Session" data-model="app.allSessions.dataList" data-bind="events: { show: detailsShow, afterShow: detailsAfterShow }">
+    <header data-role="header">
+        <div data-role="navbar" class="header-text">
+            <a data-role="backbutton" data-align="left">Back</a>
+            <span data-role="view-title"></span>
+
+            <a data-role="button" id="notes" data-align="right" data-icon="note-button" data-click="app.myAgenda.showNotes"></a>
+
+
+        </div>
+    </header>
+
+    <div class="title">
+      <h1 data-bind="text:currentItem.Title"></h1>
+      <button type="button" id="favorite" data-role="button" data-icon="favorites" data-click="app.allSessions.markAsFavorite"></button>
+
+    </div>
+
+
+
+    <p data-bind="text:currentItem.Location"></p>
+    <p data-bind="text:currentItem.Description"></p>
+
+    <p class="room-status" style="padding-bottom:15px;" data-bind="visible:currentItem.success">
+        <span style="background-color:#3fcb02;color:#fff;padding:5px;" data-bind="visible:currentItem.attendee"><span class="num-of-attendees" data-bind="text:currentItem.attendee"></span> attendees</span> <span class="room-overflow" style="padding:5px;color:#fff;background-color:red;display:none;" data-bind="visible:currentItem.overflow">Overflow</span>
+    </p>
+
+    <p style="text-transform:uppercase" id="speakerListTitle" style="display:none;">
+      Speakers
+    </p>
+
+    <ul data-role="listview" id="speakersList"  data-template="speakerListTemplate" data-bind="{ source: currentItem.dataSource">
+    </ul>
+
+    <script type="text/x-kendo-template" id="speakerListTemplate">
+          <div style="display:table">
+              <div style="display:table-cell;">
+                 <img src="#: app.getImageURI(data.Image) #" />
+              </div>
+              <div style="display:table-cell;vertical-align:middle;">
+                 <h3>#: data['First_Name'] #  #: data['Last_Name'] # </h3>
+                 <p style="margin-top:0px;font-size:13px;"> #: data['Title'] # </p>
+              </div>
+          </div>
+
+          <p style="margin-top:2px">#: data['Bio'] #</p>
+    </script>
+
+
+    <p style="text-transform:uppercase" id="workshopListTitle" style="display:none;">
+      Workshops
+    </p>
+
+    <ul data-role="listview" id="workshopList" data-template="workshopListTemplate" data-bind="{ source: currentItem.workshops, click: currentItem.favorite }" >
+    </ul>
+
+    <script type="text/x-kendo-template" id="workshopListTemplate">
+
+       <div style="width:100%;display:table;margin-bottom:0px;">
+            <div style="display:table-cell;width:90%;margin:0px;">
+               <h3 style="font-size:17px;margin-bottom:0px;text-transform:none;font-weight:500">#: data['Name'] #</h3>
+              <p style="margin-top:2px;font-size:11px;" > #: data['Description'] # </p>
+              <p>#: data['KeyPoints'] #</p>
+            </div>
+            <div style="display:table-cell">
+                #
+                if (getAgenda(data["id"])) { #
+                 <button type="button" class="km-selected" data-icon="favorites" id="favoriteButton" data-role="button" ></button>
+               # } else { #
+                 <button type="button" data-icon="favorites" id="favoriteButton" data-role="button"></button>
+               #} #
+        </div>
+    </script>
+
+    <p>&nbsp;</p>
+
+    <script>
+       function getAgenda(id){
+          if (app.agenda && app.agenda[id]){
+            return true;
+          }
+          return false;
+       }
+    </script>
+
+
+
+    <!-- START_CUSTOM_CODE_dataList -->
+    <!-- END_CUSTOM_CODE_dataList -->
+</div>

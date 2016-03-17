@@ -1,0 +1,8 @@
+{
+  "name": "progressNextHybrid",
+  "private": true,
+  "dependencies": {
+    "kendo-ui-appbuilder-core": "*"
+  },
+  "devDependencies": {}
+}

@@ -1,0 +1,58 @@
+<div data-role="view" data-title="Account" data-layout="main" data-model="app.authenticate" data-show="app.authenticate.onShow" data-after-show="app.authenticate.afterShow">
+    <div class="signin-view">
+        <form>
+            <ul data-role="listview" data-style="inset">
+                <li>
+                        <input type="email" placeholder="Email" data-bind="value: authenticationForm.email" required autofocus>
+                </li>
+                <li>
+                        <input type="password" placeholder="Password" data-bind="value: authenticationForm.password" required>
+                </li>
+            </ul>
+
+            <div class="button-group button-group-vertical">
+                <a data-role="button" class="primary" data-bind="events: { click: authenticationForm.signin }">Sign In</a>
+
+                <a data-role="button" data-bind="events: { click: authenticationForm.toggleView }">Register</a>
+
+            </div>
+        </form>
+    </div>
+    <div class="signup-view" style="display:none;">
+        <form>
+            <ul data-role="listview" data-style="inset">
+                <li>
+                        <input type="text" placeholder="Name" data-bind="value: authenticationForm.displayName">
+                </li>
+                 <li>
+                        <input type="email" placeholder="Email" data-bind="value: authenticationForm.email" required>
+                 </li>
+                <li>
+                        <input type="password"  placeholder="Password" data-bind="value: authenticationForm.password">
+                </li>
+             
+                 <li>
+                        <input type="text" placeholder="Company" data-bind="value: authenticationForm.company" required>
+                </li>
+                <li>
+                        <input type="text" placeholder="Title" data-bind="value: authenticationForm.title" required>
+                </li>
+                <li>
+                    <input type="tel" placeholder="Phone" data-bind="value: authenticationForm.phone">
+                </li>
+            </ul>
+            <div class="button-group button-group-vertical">
+                <a class="primary" data-role="button" data-bind="events: { click: authenticationForm.register }">Register</a>
+                <a data-role="button" data-bind="events: { click: authenticationForm.toggleView }">Sign In</a>
+            </div>
+        </form>
+        <!-- START_CUSTOM_CODE_authenticationForm -->
+        <!-- END_CUSTOM_CODE_authenticationForm -->
+    </div>
+    <div class="offline" align="center" style="display:none;">
+        You are currently offline. Before using this app in offline mode you must initialize it while you are online
+    </div>
+    <!-- START_CUSTOM_CODE_authenticate -->
+    <!-- END_CUSTOM_CODE_authenticate -->
+
+   </div>

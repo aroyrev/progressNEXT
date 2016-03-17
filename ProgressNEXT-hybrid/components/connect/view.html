@@ -1,0 +1,73 @@
+<div data-role="view" data-title="Contacts"  data-model="app.connect" data-show="app.connect.onShow" data-after-show="app.connect.afterShow", data-before-show="app.connect.beforeShow">
+   <header data-role="header">
+        <div data-role="navbar">
+            <span data-role="view-title"></span>
+            <a data-role="button" href="#appDrawer" data-rel="drawer" data-align="left" data-icon="drawer-button"></a>
+            <a data-role="button" data-align="right" data-icon="add" data-click="app.connect.search"></a>
+        </div>
+    </header>
+
+    <div data-role="modalview" id="contact" style="width: 80%;">
+
+        <div data-role="header">
+            <div data-role="navbar">
+                <span>Found Contact</span>
+            </div>
+        </div>
+
+        <div data-role="footer">
+            <div data-role="navbar">
+                <a type="button" data-role="button" data-click="app.barcode.close">Cancel</a>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="contact-tabs"></div>
+
+    <ul id="contactRequestList">
+
+    </ul>
+    <!-- START_CUSTOM_CODE_contacts -->
+    <!-- END_CUSTOM_CODE_contacts -->
+    <script type="text/x-kendo-template" id="contactRequestTemplate">
+        <div class="image-with-text contact-card">
+            <h3>#: data['FirstName'] # #: data['LastName'] #</h3>
+            <p class="title">#: data['Title'] #, #: data['Company'] #</p>
+
+             <p style="margin-left:10px;margin-top:2px" class="action">
+            <button type="button"  data-role="button" data-icon="accept-icon" class="accept">Accept</button>
+            </p>
+         </div>
+    </script>
+
+
+
+    <ul id="contactList">
+    </ul>
+    <!-- START_CUSTOM_CODE_contacts -->
+    <!-- END_CUSTOM_CODE_contacts -->
+    <script type="text/x-kendo-template" id="contactsTemplate">
+        <div class="image-with-text contact-card">
+            <h3>#: data['FirstName'] # #: data['LastName'] #</h3>
+            <p class="title">#: data['Title'] #, #: data['Company'] #</p>
+            <p style="font-size:13px;margin-top:0px;">email: <a href="emailto: #:data['Email']#"> #: data['Email']# </a> </p>
+            # if (data['Phone'] !== "null") { #
+
+                <p  style="font-size:13px;margin-top:0px;">phone: #: phone(data['Phone']) #</p>
+
+            # } #
+            <p style="margin-left:10px;margin-top:2px" class="action">
+                <button type="button"  data-role="button" data-icon="email-button" class="email">Email</button>
+                <button type="button" id="saveContact"  data-role="button" data-icon="contacts" class="save">Save</button>
+                 <button type="button"  data-role="button" data-icon="trash" class="delete">Delete</button>
+            </p>
+         </div>
+    </script>
+
+    <script type="text/javascript">
+        function phone(text){
+            return text.replace(/(\d\d\d)(\d\d\d)(\d\d\d\d)/, "$1-$2-$3");
+        }
+    </script>
+</div>

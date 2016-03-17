@@ -1,0 +1,51 @@
+extends layout
+
+block content
+  
+  div(data-role="view", data-title="Search", data-model="app.search", data-show="app.search.onShow")
+    header(data-role="header")
+      div(data-role="navbar")
+          span(data-role="view-title")
+      
+    div(id="listview")
+
+    script(type="text/x-kendo-template",id="listviewTemplate")
+      h4 
+        | #: data['firstName'] #, #: data['lastName'] #
+      p  #: data['title'] #, #: data['organization'] #
+      p
+        # if (data['wanted']){ #
+        span(style="padding:5px;color:white;background-color:red;border-radius:2px;font-size:11px;")
+          | Wanted
+        # } #
+    
+  div(data-role="view", id="detail", data-title="Notification", data-model="app.detail", data-show="app.detail.onShow")
+    header(data-role="header")
+      div(data-role="navbar")
+          span(data-role="view-title")
+          a(data-role="backbutton", data-align="left") Back
+          
+    h2  
+      span(data-bind="text:currentItem.firstName")
+      | &nbsp;
+      span(data-bind="text:currentItem.lastName")
+          
+    ui(data-role="listview")
+      li
+        textarea(placeholder="Meet us at booth #51", data-bind="value:message", rows="5", style="width:100%;")
+      li
+        span(style="font-weight:700;padding-left:5px;") Notify when enters the folloiwng room(s):
+      li 
+        span(style="font-weight:500;padding-left:5px;") 
+        span Accacia 1
+        input(id="status-switch", data-role="switch", data-bind="checked:accacia1", data-on-label="yes", data-off-label="no")
+      li 
+        span(style="font-weight:500;padding-left:5px;") 
+        span Ballroom 1
+        input(id="status-switch", data-role="switch", data-bind="checked:ballroom1", data-on-label="yes", data-off-label="no")
+      li 
+        span(style="font-weight:500;padding-left:5px;") 
+        span Grand Ballroom
+        input(id="status-switch", data-role="switch", data-bind="checked:grand", data-on-label="yes", data-off-label="no")
+      li
+          button(data-role="button", data-click="app.detail.notify") Send Notification

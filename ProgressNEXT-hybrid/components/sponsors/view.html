@@ -1,0 +1,23 @@
+<div data-role="view" data-title="Sponsors" data-layout="main" data-model="app.sponsors" data-show="app.sponsors.onShow" data-after-show="app.sponsors.afterShow">
+    <!-- START_CUSTOM_CODE_sponsors -->
+    <!-- END_CUSTOM_CODE_sponsors -->
+
+    <h2 class="h2-header">
+        Sponsors
+    </h2>
+    
+    <div id="sponsorList" class="sponsors">
+
+    </div>
+
+    <!-- START_CUSTOM_CODE_dataList -->
+    <!-- END_CUSTOM_CODE_dataList -->
+    <script type="text/x-kendo-template" id="sponsorListTemplate">
+                <img src="#: app.getImageURI(data['Image']) #" alt="logo" style="width:150px;padding:15px;"/>
+                <p>#: data['Short'] #</p>
+                <p style="text-decoration:underline;">#: data['Website'] #</p>
+    </script>
+
+
+
+</div>

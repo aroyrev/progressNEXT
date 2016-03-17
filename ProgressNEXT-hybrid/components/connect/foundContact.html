@@ -1,0 +1,75 @@
+<div data-role="view" data-title="Found Contact" data-model="app.barcode.contact" data-bind="events: { show: show }">
+
+    <header data-role="header">
+        <div data-role="navbar" class="header-text">
+            <a data-role="backbutton" data-align="left">Back</a>
+            <span  style="overflow: hidden; white-space: nowrap; text-overflow: ellipsis; text-align: center; display: block; margin-left: 70px; margin-right: 70px;">Found Contact</span>
+        </div>
+    </header>
+
+    <h2 class="h2-header">
+      Confirmation
+    </h2>
+
+     <div id="contact">
+
+        <ul>
+          <li>
+          <input type="text" class="k-textbox" placeholder="Name" data-bind="value:name"/>
+        </li>
+
+        <li>
+          <input type="text" class="k-textbox" placeholder="Company" data-bind="value:company"/>
+        </li>
+        <li>
+          <input type="text" class="k-textbox" placeholder="Title" data-bind="value:title"/>
+        </li>
+        <li>
+          <input type="text" class="k-textbox" placeholder="Email" data-bind="value:email"/>
+        </li>
+        <li>
+          <input type="text" class="k-textbox" placeholder="Phone" data-bind="value:phone"/>
+        </li>
+
+      </ul>
+
+      <div class="button-group button-group-vertical">
+        <a data-role="button" data-rel="external" data-click="save" >Confirm</a>
+      </div>
+
+    </div>
+
+    <script>
+         function save(e){
+            app.mobileApp.pane.loader.show();
+
+            var jsdo = new progress.data.JSDO({ name : 'Contact716'});
+
+            jsdo.subscribe('afterCreate', afterCreate, this);
+
+            var names = app.barcode.contact.name.split(" ");
+
+            jsdo.add({
+                "firstName" : names[0],
+                "lastName" :  names[1],
+                "email": app.barcode.contact.email,
+                "phone": app.barcode.contact.phone,
+                "title": app.barcode.contact.title,
+                "Company_Name": app.barcode.contact.company,
+                "R168904801": app.currentUser.id,
+            });
+
+            jsdo.saveChanges();
+
+            function afterCreate(jsdo, record, success, request){
+              if (success){
+                   app.connect.contacts.isDirty = true;
+                   app.mobileApp.pane.loader.hide();
+                   app.mobileApp.navigate('#components/connect/view.html', "slide:back");
+              }
+            }
+          }
+
+    </script>
+
+</div>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'">
+
+    <meta charset="utf-8">
+
+    <link href="bower_components/kendo-ui-appbuilder-core/styles/kendo.mobile.all.min.css" rel="stylesheet">
+
+    <link href="styles/main.css" rel="stylesheet">
+
+    <!-- cordova script (this will be a 404 during development if served with `grunt serve`) -->
+    <script src="cordova.js"></script>
+
+    <script src="bower_components/SparkMD5/spark-md5.min.js"></script>
+
+    <script src="bower_components/kendo-ui-appbuilder-core/js/jquery.min.js"></script>
+    <script src="bower_components/kendo-ui-appbuilder-core/js/kendo.mobile.min.js"></script>
+    <script src="bower_components/everlive/min/everlive.all.min.js"></script>
+
+    <script src="lib/progress/progress.all.at-sign.js"></script>
+
+    <script src="sessions.js"></script>
+
+    <script src="app.js"></script>
+
+    <script src="dataProviders/progressDataProvider.js"></script>
+
+    <script src="dataProviders/progressNext.js"></script>
+
+    <script src="config.js"></script>
+
+</head>
+
+<body id="progressNextHybrid">
+    <script src="analytics.js"></script>
+    <script src="components/thingsToDo/index.js"></script>
+    <script src="components/sponsors/index.js"></script>
+    <script src="components/floorPlan/index.js"></script>
+    <script src="components/about/index.js"></script>
+    <script src="components/authenticate/index.js"></script>
+    <script src="components/allSessions/index.js"></script>
+    <script src="components/myAgenda/index.js"></script>
+    <script src="components/connect/index.js"></script>
+    <script src="components/profile/index.js"></script>
+    <script src="components/social/index.js"></script>
+    <div data-role="layout" data-id="main">
+        <header data-role="header">
+            <div data-role="navbar">
+                <span data-role="view-title"></span>
+                <a data-role="button" href="#appDrawer" data-rel="drawer" data-align="left" data-icon="drawer-button"></a>
+            </div>
+        </header>
+
+        <!-- application views will be rendered here -->
+    </div>
+
+    <div data-role="layout" data-id="main-nonav">
+        <header data-role="header">
+            <div data-role="navbar">
+                <span data-role="view-title"></span>
+            </div>
+        </header>
+
+        <!-- application views will be rendered here -->
+    </div>
+
+
+    <div data-role="layout" data-id="main-barcode">
+        <header data-role="header">
+            <div data-role="navbar">
+                <span data-role="view-title"></span>
+                <a data-role="button" href="#appDrawer" data-rel="drawer" data-align="left" data-icon="drawer-button"></a>
+                <a data-role="button" data-align="right" data-icon="barcode-icon" data-click="app.barcode.scan"></a>
+            </div>
+        </header>
+
+        <!-- application views will be rendered here -->
+    </div>
+
+    <div data-role="layout" data-id="main-tweet">
+        <header data-role="header">
+            <div data-role="navbar">
+                <span data-role="view-title"></span>
+                <a data-role="button" href="#appDrawer" data-rel="drawer" data-align="left" data-icon="drawer-button"></a>
+                <a data-role="button" data-align="right" data-icon="tweet-icon" data-click="app.social.tweet"></a>
+            </div>
+        </header>
+
+        <!-- application views will be rendered here -->
+    </div>
+
+
+
+    <div id="appDrawer" data-role="drawer" data-title="Progress NEXT">
+        <header data-role="header">
+            <div data-role="navbar" class="km-accent">
+                <span data-role="view-title"></span>
+            </div>
+        </header>
+        <ul id="navigation-container" data-role="listview">
+            <li><a href="components/authenticate/view.html">Sign In</a></li>
+            <li><a href="components/allSessions/view.html" class="active">Explore Sessions</a></li>
+            <li><a href="components/floorPlan/view.html">Floor Plan</a></li>
+            <li style="display:none;"><a href="components/connect/view.html">Connect</a></li>
+            <li><a href="components/thingsToDo/view.html">Things To Do</a></li>
+            <li><a href="components/social/view.html">Social</a></li>
+            <li><a href="components/sponsors/view.html">Sponsors</a></li>
+            <li style="display:none;"><a href="components/profile/view.html">Profile</a></li>
+            <li><a href="components/about/view.html">About</a></li>
+        </ul>
+
+        <div data-role="footer">
+            <img src="images/logo.png" style="padding:5px;" alt="Progress NEXT">
+        </div>
+    </div>
+
+</body>
+
+</html>

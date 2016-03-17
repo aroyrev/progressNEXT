@@ -1,0 +1,22 @@
+<div data-role="view" data-title="Profile" data-layout="main" data-model="app.profile" data-show="app.profile.onShow" data-after-show="app.profile.afterShow">
+
+  	<div style="padding:5px">
+
+		<h2 data-bind="text:user.Name" style="margin-bottom:0px;color:#4c5356;font-weight:500;"></h2>
+		<p  data-bind="text:user.Summary" style="margin-top:4px;margin-bottom:2px;font-weight:400;text-transform:uppercase;"></p>
+
+
+	</div>
+
+	<div style="padding:10px 20px;">
+		<img id="qrImg" style="width:100%" />
+	</div>
+
+	<div class="button-group button-group-vertical" style="display:none;padding:5px;padding-top:0px;margin-top:5px;" id="logoutButton">
+
+		<a data-role="button" data-click="app.profile.logout" >Sign Out</a>
+	</div>
+
+
+
+</div>

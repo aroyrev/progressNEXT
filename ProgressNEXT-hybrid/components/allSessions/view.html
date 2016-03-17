@@ -1,0 +1,46 @@
+<div data-role="view" data-title="All Sessions" data-layout="main" data-model="app.allSessions" data-show="app.allSessions.onShow" data-after-show="app.allSessions.afterShow" data-before-show="app.allSessions.beforeShow">
+    <!-- START_CUSTOM_CODE_allSessions -->
+    <!-- END_CUSTOM_CODE_allSessions -->
+   <ul id="date">
+
+   </ul>
+
+    <div id="sessionList" class="sessions">
+
+    </div>
+    <!-- START_CUSTOM_CODE_dataList -->
+    <!-- END_CUSTOM_CODE_dataList -->
+    <script type="text/x-kendo-template" id="dataListTemplate">
+            <div style="width:100%;padding-bottom:10px;padding-top:10px;">
+                <p style="margin-top:0px;margin-bottom:0px;">#: kendo.toString(data['Start'], 'h:mm') # - #: kendo.toString(data['End'], 'h:mm tt') #</p>
+                <div style="width:100%;display:table;margin-bottom:0px;">
+                    <div style="display:table-cell;width:90%;margin:0px;">
+                        <h2>#: data['Title'] #</h2>
+                    </div>
+                    <div style="display:table-cell">
+                        #
+                        if (getAgenda(data["id"])) { #
+                         <button type="button" class="km-selected" data-icon="favorites" id="favoriteButton" data-role="button" ></button>
+                       # } else { #
+                         <button type="button" data-icon="favorites" id="favoriteButton" data-role="button"></button>
+                       #} #
+                </div>
+                </div>
+                # if ( data['Room'] !== "null"){ #
+                    <p>#: data['Room'] #</p>
+                # } #
+            </div>
+    </script>
+
+
+    <script>
+       function getAgenda(id){
+          if (app.agenda && app.agenda[id]){
+          	return true;
+          }
+          return false;
+       }
+    </script>
+
+
+</div>

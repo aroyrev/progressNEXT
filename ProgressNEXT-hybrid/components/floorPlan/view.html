@@ -1,0 +1,36 @@
+<div data-role="view" data-title="Floor Plan" data-layout="main" data-model="app.floorPlan.model" data-show="app.floorPlan.onShow" data-after-show="app.floorPlan.afterShow">
+    <!-- START_CUSTOM_CODE_floorPlan -->
+
+    <!-- END_CUSTOM_CODE_floorPlan -->
+
+	<h2 class="h2-header" data-bind="text:item.Title"></h2>
+
+
+   <div id="floorPlan">
+
+  </div>
+
+
+  <script id="floorplan-template" type="text/x-kendo-template">
+
+  	# var img = app.getImageURI(data.Image) #
+  	<a data-click="openWin" data-role="button" data-img="#: img #">
+  		<img src="#: img #" style="width: 100%;padding:10px;" alt="Floor Map"/>
+  		 <span style="text-transform:uppercase;font-size:11px">Tap to Zoom</span>
+
+  	</a>
+  </script>
+
+  <p data-bind="text:item.Notes"></p>
+
+
+  <script type="text/javascript">
+	  function openWin(e){
+	  	var data = e.button.data();
+	     app.mobileApp.navigate('#components/floorPlan/details.html?uid=' + escape(data.img));
+	  }
+
+  </script>
+
+
+</div>

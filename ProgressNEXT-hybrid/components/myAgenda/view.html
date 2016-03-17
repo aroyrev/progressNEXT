@@ -1,0 +1,40 @@
+<div data-role="view" data-title="My Agenda" data-layout="main" data-model="app.myAgenda" data-show="app.myAgenda.onShow" data-after-show="app.myAgenda.afterShow" data-before-show="app.myAgenda.beforeShow">
+    <!-- START_CUSTOM_CODE_myAgenda -->
+    <!-- END_CUSTOM_CODE_myAgenda -->
+
+    <ul id="agendaDate">
+
+    </ul>
+
+
+    <ul id="agendaList"  class="sessions">
+    </ul>
+
+    <div class="noAgenda" id="noAgenda">
+        No agenda
+    </div>
+
+    <!-- START_CUSTOM_CODE_agenda -->
+    <!-- END_CUSTOM_CODE_agenda -->
+    <!-- START_CUSTOM_CODE_dataList -->
+    <!-- END_CUSTOM_CODE_dataList -->
+    <script type="text/x-kendo-template" id="agendaTemplate">
+        <div style="width:100%;padding-bottom:10px;padding-top:10px;">
+             <p style="margin-top:0px;margin-bottom:0px;">#: kendo.toString(data['Start'], 'h:mm') # - #: kendo.toString(data['End'], 'h:mm tt') #</p>
+            <div style="width:100%;display:table;margin-bottom:0px;">
+                <h2>#: data['Title'] #</h2>
+            </div>
+            # if ( data['Room'] !== "null"){ #
+                <p>#: data['Room'] #</p>
+            # } #
+        </div>
+    </script>
+
+    <script>
+        $(function() {
+            app.selectedIndex = 0;
+      });
+
+    </script>
+
+</div>

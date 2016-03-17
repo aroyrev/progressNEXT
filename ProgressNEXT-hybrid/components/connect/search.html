@@ -1,0 +1,36 @@
+<div data-role="view" data-title="Contact Request" data-model="app.connect.contacts" data-bind="events: { show: show, afterShow: afterShow, beforeShow:beforeShow }">
+    <header data-role="header">
+        <div data-role="navbar" class="header-text">
+            <a data-role="backbutton" data-align="left">Back</a>
+            <span data-role="view-title"></span>
+            <a data-role="button" data-align="right" data-icon="barcode-icon" data-click="app.barcode.scan"></a>
+        </div>
+    </header>
+
+
+    <p style="font-size:11px;">You can also add a contact by scanning their QRCode, which is visible in the Profile screen.</p>
+
+    <div class="km-listview-wrapper">
+      <form class="km-filter-form">
+        <div class="km-filter-wrap"><input type="search" placeholder="Search Partner" data-model="app.connect.contacts" data-bind="events:{keyup: onKeyUp }"><a href="#" class="km-filter-reset" title="Clear" style="display: none;"><span class="km-icon km-clear"></span><span class="km-text">Clear</span></a>
+        </div>
+      </form>
+    </div>
+
+    <ul id="allContactList">
+
+    </ul>
+    <!-- START_CUSTOM_CODE_contacts -->
+    <!-- END_CUSTOM_CODE_contacts -->
+    <script type="text/x-kendo-template" id="allContactsTemplate">
+        <div class="image-with-text contact-card">
+            <h3>#: data['FirstName'] # #: data['LastName'] #</h3>
+            <p class="title">#: data['Title'] #, #: data['Company'] #</p>
+
+             <p style="margin-left:10px;margin-top:2px" class="action">
+            <button type="button"  data-role="button" data-icon="add" class="request">Request Contact</button>
+            </p>
+         </div>
+    </script>
+
+</div>

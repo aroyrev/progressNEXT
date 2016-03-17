@@ -1,0 +1,11 @@
+{
+  "name": "progressNextHybrid",
+  "private": true,
+  "dependencies": {
+    "kendo-ui-appbuilder-core": "*",
+    "everlive": "~1.5.7",
+    "SparkMD5": "~2.0.0",
+    "angular": "~1.4.8"
+  },
+  "devDependencies": {}
+}

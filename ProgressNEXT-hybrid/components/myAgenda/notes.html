@@ -1,0 +1,29 @@
+<div data-role="view" data-title="Notes" data-model="app.myAgenda.notes" data-bind="events: { show: detailsShow }">
+
+
+    <header data-role="header">
+        <div data-role="navbar" class="header-text">
+            <a data-role="backbutton" data-align="left" data-click="app.myAgenda.notes.save">Back</a>
+            <span data-role="view-title"></span>
+            <a data-role="button"  data-align="right" data-icon="save-button" data-click="app.myAgenda.notes.save"></a>
+        </div>
+
+    </header>
+
+    <h1 data-bind="text:Title"></h1>
+
+    <p data-bind="text:Location"></p>
+    <p data-bind="text:Description"></p>
+
+    <p>
+      <textarea id="editor" style="width:100%;min-height:300px;border:0;font-size:17px;padding:10px;background-color:#fcf8e3;border-color:#faebcc;" data-bind="value:Notes" placeholder="Take your notes here">
+      </textarea>
+    </p>
+
+    <p style="font-size:11px;">Notes are automatically saved in the backround.</p>
+
+
+     </div>
+
+
+</div>

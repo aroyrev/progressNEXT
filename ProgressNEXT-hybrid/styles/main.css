@@ -1,0 +1,605 @@
+.km-flat .km-rowinsert,
+.km-flat .km-state-active,
+.km-flat .km-scroller-pull,
+.km-flat .k-slider-selection,
+.km-flat .km-touch-scrollbar,
+.km-flat .km-pages .km-current-page,
+.km-flat .k-slider .k-draghandle,
+.km-flat .k-slider .k-draghandle:hover,
+.km-flat .km-tabstrip .km-state-active,
+.km-flat .km-scroller-refresh.km-load-more,
+.km-flat .km-popup .k-state-hover,
+.km-flat .km-popup .k-state-focused,
+.km-flat .km-popup .k-state-selected,
+.km-flat .km-actionsheet > li > a:active,
+.km-flat .km-actionsheet > li > a:hover,
+.km-flat li.km-state-active .km-listview-link,
+.km-flat li.km-state-active .km-listview-label,
+.km-flat .km-listview-label input[type=radio]:checked,
+.km-flat .km-listview-label input[type=checkbox]:checked
+{
+    background: #4c5356;
+}
+
+.km-flat .km-filter-wrap > input:focus
+{
+    border-color: #4c5356;
+}
+
+.km-on-ios .km-header .km-navbar
+{
+    background-color: #3fcb02;
+}
+
+.km-on-ios .km-header .km-widget,
+   .km-on-ios .km-header .km-view-title{
+       color: white;
+}
+
+.km-flat .km-loader:before {
+    background: #3fcb02;
+}
+
+.km-flat .km-button {
+   background: transparent;
+   color:#000;
+   scrollbar-face-color: red;
+}
+.km-flat .km-state-active {
+    background: #3fcb02;
+    color:#fff;
+}
+
+.km-barcode-icon:after,
+.km-barcode-icon:before{
+    content: "\e085";
+}
+
+.km-accept-icon:after,
+.km-accept-icon:before{
+    content: "\e037";
+}
+
+div form li input{
+  height: 50px;
+  margin-top: -1.6em!important;
+  padding: 5px 0px;
+  top:0px;
+  left:80px;
+  right:5px;
+  text-align: center;
+  width: inherit!important;
+
+}
+
+.km-close-button:after,
+.km-close-button:before{
+    content: "\e031";
+}
+
+.km-zoom-button:after,
+.km-zoom-button:before{
+    content: "\e080";
+}
+
+.km-save-button:after,
+.km-save-button:before{
+   content: '\e0bd';
+}
+.km-email-button:after,
+.km-email-button:before{
+   content: '\e099';
+}
+
+
+.km-note-button:after,
+.km-note-button:before{
+   content: '\e0d5';
+}
+
+.km-tweet-icon:after,
+.km-tweet-icon:before{
+   content: '\e20a';
+}
+
+.contact-card h3{
+  margin-bottom: 2px;
+}
+
+.contact-card p{
+  margin-top: 3px !important;
+  margin-bottom: 3px;
+}
+
+.contact-card p.title{
+  margin-bottom: 10px !important;
+}
+
+.contact-card p.action{
+  margin-top: 10px !important;
+  margin-bottom: 10px !important;
+}
+
+#contact ul {
+  list-style: none;
+  padding: 0 15px !important;
+}
+
+#contact li {
+  margin: 0;
+  list-style: none;
+}
+
+
+#contact .button-group a{
+  background-color: #3fcb02;
+  color: white;
+  font-size: 21px;
+  padding: 13px !important;
+}
+
+#progressNextHybrid #noContact {
+  color:#333;
+  display:none;
+}
+
+#contact .km-footer .km-navbar .km-view-title {
+    line-height: 1.0em !important;
+}
+
+#contact .k-textbox {
+    font-size: 17px;
+    height: 50px;
+    text-indent: 0.8em;
+    border: 0px;
+    width: 100%;
+    margin: 3px auto !important;
+    color: #333;
+    -webkit-border-radius:0px;
+    border-radius: 0px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+#progressNextHybrid .image-with-text img {
+    float: left;
+    margin-right: 15px;
+}
+
+#progressNextHybrid .signup-view li,
+#progressNextHybrid .signin-view li{
+  padding: 5px 10px !important;
+  height: 50px;
+  width: 100% !important;
+}
+#progressNextHybrid .signup-view li input,
+#progressNextHybrid .signin-view li input{
+  left:0px;
+}
+
+#progressNextHybrid .h2-header {
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 25px;
+  font-stretch: condensed;
+  -webkit-text-fill-color: #ddd;
+}
+
+#progressNextHybrid .block {
+    display: block;
+    margin: 1em;
+    padding: 1em;
+    text-align: center;
+}
+
+#progressNextHybrid .button-group,
+#progressNextHybrid .icon-group {
+    width: 100%;
+    display: table;
+    border-collapse: separate;
+    border-spacing: 1em;
+}
+
+#progressNextHybrid .button-group {
+    table-layout: fixed;
+}
+
+#progressNextHybrid .button-group .km-button {
+    display: table-cell;
+    padding: .6em .8em;
+    margin: 1em 0;
+}
+
+#progressNextHybrid #contactList .image-with-text button.email{
+  color: #333!important;
+  text-decoration: none;
+}
+
+
+#progressNextHybrid #contactList .image-with-text button.save{
+  color: #333!important;
+}
+
+#progressNextHybrid .button-group.button-group-vertical .km-button {
+    display: block;
+}
+
+#progressNextHybrid.km-flat .button-group .km-button.primary {
+    color:  #fff;
+    background-color: #10c4b2;
+}
+
+#progressNextHybrid.km-ios7 .button-group .km-button.primary {
+    color:  #4D4D4D;
+    background-color: #007aff;
+}
+
+#progressNextHybrid.km-android .button-group .km-button.primary {
+    color:  #4D4D4D;
+    background-color: #33b5e5;
+}
+
+#progressNextHybrid .group-separator {
+    border: none;
+    background: transparent;
+}
+
+#progressNextHybrid .group-separator-header {
+    margin: 1em 0;
+}
+
+#progressNextHybrid .app-icon {
+    text-align: center;
+    margin: 3em 0;
+}
+
+#progressNextHybrid .view-title {
+    text-align: center;
+    font-weight: normal;
+}
+
+#progressNextHybrid .km-drawer-button:after,
+#progressNextHybrid .km-drawer-button:before {
+    content: '\e077';
+}
+
+#progressNextHybrid .km-drawer {
+  height: 100%;
+}
+
+#progressNextHybrid .km-drawer .km-footer {
+    background: #F2F2F2;
+    text-align: center;
+}
+
+#progressNextHybrid .km-drawer .km-footer img {
+   width: 95%;
+}
+
+#progressNextHybrid.km-flat .km-drawer .km-content {
+  font-size: 1.2em;
+  background: #F2F2F2;
+}
+
+
+#progressNextHybrid.km-flat .km-drawer .km-list > li {
+  background: #F2F2F2;
+}
+
+#progressNextHybrid.about-view {
+  background:#F2F2F2
+}
+
+#progressNextHybrid .icon-group .app-icon,
+#progressNextHybrid .icon-group .app-details {
+    display: table-cell;
+    vertical-align: top;
+}
+
+#progressNextHybrid .icon-group .app-icon {
+    margin: 0;
+    width: 5em;
+    overflow: hidden;
+    text-align: left;
+}
+
+#progressNextHybrid .icon-group .app-icon img {
+    display: block;
+    max-width: 5em;
+    height: auto;
+}
+
+#progressNextHybrid .icon-group .app-details h2,
+#progressNextHybrid .icon-group .app-details h4 {
+    font-weight: normal;
+    margin: 0;
+}
+
+
+
+#progressNextHybrid .icon-group .app-details h4 {
+    color: #828282;
+    margin-top: 0.5em;
+}
+
+
+/* START_CUSTOM_CODE_progressNextHybrid */
+
+
+/* END_CUSTOM_CODE_progressNextHybrid */
+
+
+/*Fix navigation labels*/
+
+#progressNextHybrid.km-flat .button-group .km-button{
+    padding: 15px;
+}
+
+#progressNextHybrid.km-flat .button-group .km-button.primary{
+    background: #3fcb02;
+}
+
+#progressNextHybrid #navigation-container > li{
+    line-height: 2.0em;
+}
+
+#navigation-container .km-listview-link::after
+{
+    display: none;
+}
+
+#progressNextHybrid #navigation-container.km-tabstrip .km-button {
+    vertical-align: top;
+}
+
+#progressNextHybrid #navigation-container.km-tabstrip .km-button .km-text {
+    max-width: 100%;
+    word-wrap: break-word;
+}
+
+#progressNextHybrid #navigation-container .active {
+    background: #3fcb02;
+    color:#fff;
+}
+
+#progressNextHybrid #navigation-container .active:after {
+    color:#fff;
+}
+
+.progressNextHybrid .km-flat .km-touch-scrollbar{
+    color: #3fcb02;
+}
+
+#progressNextHybrid #speakersList img {
+  width: 80px;
+  padding: 5px;
+  margin-left: 10px;
+}
+
+#progressNextHybrid #speakersList h3 {
+  margin-top: 5px;
+  margin-bottom:5px;
+}
+
+#progressNextHybrid #speakersList .left {
+  display: table-cell;
+}
+
+#progressNextHybrid #speakersList .right {
+  display: table-cell;
+  vertical-align: top;
+}
+
+#progressNextHybrid #sessionList.km-list p:first-child {
+  margin-top:0px;
+  margin-bottom:15px;
+  font-weight: lighter;
+  font-size: 11px;
+  color: #4a5c67;
+}
+
+#progressNextHybrid #sessionList.km-list p:last-child {
+  margin-top:0px;
+  margin-bottom:10px;
+  font-size: 11px;
+}
+
+#progressNextHybrid #sessionList.km-list h2 {
+  margin-bottom: 0px;
+  margin-top: 5px;
+  line-height: normal;
+  font-weight: 500;
+  font-size: 19px;
+}
+
+/* sponsors */
+#progressNextHybrid #sponsorList.km-list p:first-child {
+  margin-top:0px;
+  margin-bottom:15px;
+  font-weight: lighter;
+  font-size: 11px;
+  color: #4a5c67;
+}
+
+#progressNextHybrid #sponsorList.km-list p:last-child {
+  margin-top:0px;
+  margin-bottom:10px;
+  font-size: 11px;
+}
+
+#progressNextHybrid #sponsorList.km-list h2 {
+  margin-bottom: 0px;
+  margin-top: 5px;
+  line-height: normal;
+  font-weight: 500;
+  font-size: 19px;
+}
+#progressNextHybrid #sponsorList img {
+  width: 80px;
+  padding: 10px;
+}
+
+#progressNextHybrid #sponsorList h3 {
+  margin-top: 5px;
+  margin-bottom:5px;
+}
+
+#progressNextHybrid #sponsorList .left {
+  display: table-cell;
+}
+
+#progressNextHybrid #sponsorList .right {
+  display: table-cell;
+  vertical-align: top;
+}
+
+
+/* things to do */
+#progressNextHybrid #todoList.km-list p:first-child {
+  margin-top:0px;
+  margin-bottom:15px;
+  font-weight: lighter;
+  font-size: 11px;
+  color: #4a5c67;
+}
+
+#progressNextHybrid #todoList.km-list p:last-child {
+  margin-top:0px;
+  margin-bottom:10px;
+  font-size: 11px;
+}
+
+#progressNextHybrid #todoList.km-list h2 {
+  margin-bottom: 0px;
+  margin-top: 5px;
+  line-height: normal;
+  font-weight: 500;
+  font-size: 19px;
+}
+#progressNextHybrid #todoList img {
+  width: 80px;
+  padding: 10px;
+}
+
+#progressNextHybrid #todoList h3 {
+  margin-top: 5px;
+  margin-bottom:5px;
+}
+
+#progressNextHybrid #todoList .left {
+  display: table-cell;
+}
+
+#progressNextHybrid #todoList .right {
+  display: table-cell;
+  vertical-align: top;
+}
+
+
+#progressNextHybrid #agendaList.km-list p:first-child {
+  margin-top:0px;
+  margin-bottom:15px;
+  font-weight: lighter;
+  font-size: 11px;
+  color: #4a5c67;
+}
+
+#progressNextHybrid #agendaList.km-list p:last-child {
+  margin-top:0px;
+  margin-bottom:10px;
+  font-size: 11px;
+}
+
+#progressNextHybrid #agendaList.km-list h2 {
+  margin-bottom: 0px;
+  margin-top: 5px;
+  line-height: normal;
+  font-weight: 500;
+  font-size: 19px;
+}
+
+#favoriteButton{
+  font-size: 23px;
+  padding: 5px 0px;
+  border: none;
+  color:#DDD;
+}
+
+#favoriteButton.km-state-active {
+  background-color: transparent;
+  color:#DDD;
+}
+
+#progressNextHybrid div.title  {
+    display: table;
+}
+#progressNextHybrid div.title h1 {
+  display: table-cell;
+  width: 90%;
+  padding-left: 15px;
+}
+#progressNextHybrid div.title button {
+  font-size: 23px;
+
+  border: none;
+  color:#DDD;
+  display: table-cell;
+}
+
+#progressNextHybrid div.title button.km-state-active {
+  background: transparent;
+  color:#4c5356;
+}
+
+#progressNextHybrid div.title button.km-selected {
+  background: transparent;
+  color:#4c5356;
+}
+
+#progressNextHybrid button.km-selected {
+  background: transparent;
+  color:#4c5356;
+}
+
+.noAgenda {
+  display: none;
+  padding-top: 50%;
+  padding-bottom: 45%;
+  width: 100%;
+  text-align: center;
+  font-size: 13px;
+  height: 100%;
+
+}
+
+#progressNextHybrid a.remove-contact {
+    background-color: #900;
+    color:#fff;
+}
+
+
+#progressNextHybrid div.search-wrapper{
+      padding: 1em;
+      font: 400 12px Arial, Helvetica, sans-serif;
+}
+
+#progressNextHybrid div.search-wrapper input{
+  padding: 0.5em 0;
+  font-size: 14px;
+  line-height: 14px;
+  height: 1.143em;
+  text-indent: 2.4em;
+}
+
+#progressNextHybrid div.search-wrapper.k-uniE600{
+      position: absolute;
+      font-size: 15px;
+      left: 8px;
+      top: 7px;
+      color: #a9a9a9;
+}
+
+#progressNextHybrid div.search-wrapper.k-uniE600:before,
+#progressNextHybrid div.search-wrapper.k-uniE600:after{
+    content: "\e0e9";
+}
