@@ -598,8 +598,7 @@ app.connect = kendo.observable({
             app.data.progressNext.push.setBadgeNumber(count, function(success){
                 // nothing here.
             }, function(err){
-                console.log(err);
-                alert(JSON.stringify(err));
+                console.log(err);                
             });
         }
     });
