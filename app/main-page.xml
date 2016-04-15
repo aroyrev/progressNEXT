@@ -1,8 +1,21 @@
-<Page loaded="pageLoaded" xmlns:drawer="nativescript-telerik-ui/sidedrawer" xmlns="http://www.nativescript.org/tns.xsd">
+<Page xmlns:drawer="nativescript-telerik-ui/sidedrawer"
+  xmlns="http://www.nativescript.org/tns.xsd" loaded="pageLoaded">
+
+  <ActionBar title="Progress NEXT">
+    <NavigationButton text="go back" android.systemIcon = "ic_menu_back"/>
+  </ActionBar>
+
   <drawer:RadSideDrawer>
     <drawer:RadSideDrawer.mainContent>
       <StackLayout >
-        <Label text="{{mainContentText}}" textWrap="true"/>
+        <ListView items="{{ dataItems }}">
+           <ListView.itemTemplate>
+             <StackLayout>
+                <Label text="{{ title }}" textWrap="true" class="title"/>
+                <Label text="{{ description }}" textWrap="true" class="description" />
+              </StackLayout >
+           </ListView.itemTemplate>
+         </ListView>
       </StackLayout>
     </drawer:RadSideDrawer.mainContent>
     <drawer:RadSideDrawer.drawerContent>
