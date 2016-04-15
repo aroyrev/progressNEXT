@@ -1,0 +1,16 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd"
+      xmlns:app="."
+      navigatedTo="pageNavigatedTo">
+    <StackLayout>
+      <Label text="{{ title }}" textWrap="true" class="title"/>
+      <Label text="{{ description }}" textWrap="true" class="description" />
+      <ListView>
+         <ListView.itemTemplate>
+           <StackLayout>
+              <Label text="{{ title }}" textWrap="true" />
+              <Label text="{{ description }}" textWrap="true" />
+            </StackLayout >
+         </ListView.itemTemplate>
+       </ListView>
+    </StackLayout>
+</Page>

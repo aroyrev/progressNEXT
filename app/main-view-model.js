@@ -26,7 +26,7 @@ var MainViewModel = (function (_super) {
                 promise = jsdoSession.fetch("Session5");
                 promise.done(function (data) {
                     for (var i = 0; i < data.length; i++) {
-                        _this._items.push(new DataItem(data[i].Title, data[i].Description));
+                        _this._items.push(new DataItem(data[i].Title, data[i].Description, data[i].R168422082));
                     }
                 });
             });
@@ -39,11 +39,13 @@ var MainViewModel = (function (_super) {
 }(observableModule.Observable));
 exports.MainViewModel = MainViewModel;
 var DataItem = (function () {
-    function DataItem(title, description) {
+    function DataItem(title, description, speaker) {
         this.title = title;
         this.description = description;
+        this.speaker = speaker;
     }
     return DataItem;
 }());
 exports.DataItem = DataItem;
+exports.mainViewModel = new MainViewModel();
 //# sourceMappingURL=main-view-model.js.map

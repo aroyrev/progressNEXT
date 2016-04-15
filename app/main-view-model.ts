@@ -32,7 +32,7 @@ export class MainViewModel extends observableModule.Observable {
 
            promise.done((data)=>{
                  for (var i = 0; i < data.length; i++){
-                     this._items.push(new DataItem(data[i].Title, data[i].Description));
+                     this._items.push(new DataItem(data[i].Title, data[i].Description, data[i].R168422082));
                  }
            });
       });
@@ -44,9 +44,13 @@ export class MainViewModel extends observableModule.Observable {
 export class DataItem {
     public title;
     public description;
+    public speaker;
 
-    constructor(title: string, description: string) {
+    constructor(title: string, description: string, speaker: string) {
         this.title = title;
         this.description = description;
+        this.speaker = speaker;
     }
 }
+
+export var mainViewModel = new MainViewModel();

@@ -1,4 +1,4 @@
-import viewModelModule = require("./main-view-model");
+import vmModule = require("./main-view-model");
 import frameModule = require('ui/frame');
 import observableModule = require("data/observable");
 import view = require('ui/core/view');
@@ -26,6 +26,11 @@ export function pageLoaded(args) {
   //
   //     controller.navigationBarHidden = false;
   // }
-  page.bindingContext = new viewModelModule.MainViewModel();
+  page.bindingContext = vmModule.mainViewModel;
 
+}
+
+export function listViewItemTap(args: listView.ItemEventData) {
+    frameModule.topmost().navigate("details-page");
+    vmModule.mainViewModel.set("selectedItem", args.view.bindingContext);
 }
