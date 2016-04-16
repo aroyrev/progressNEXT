@@ -13,7 +13,7 @@
              <StackLayout>
                 <Label text="{{ title }}" textWrap="true" class="title"/>
                 <Label text="{{ description }}" textWrap="true" class="description" />
-              </StackLayout >
+              </StackLayout>
            </ListView.itemTemplate>
          </ListView>
       </StackLayout>

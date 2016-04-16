@@ -1,9 +1,9 @@
 "use strict";
-var vmModule = require("./main-view-model");
+var vmModule = require("./details-view-model");
+// Event handler for Page "navigatedTo" event attached in details-page.xml
 function pageNavigatedTo(args) {
     var page = args.object;
-    var selectedItem = vmModule.mainViewModel.get("selectedItem");
-    page.bindingContext = selectedItem;
+    page.bindingContext = vmModule.detailsViewModel;
     if (page.ios) {
         page.ios.title = "Session";
     }

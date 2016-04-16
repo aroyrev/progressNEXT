@@ -1,16 +1,16 @@
 <Page xmlns="http://schemas.nativescript.org/tns.xsd"
       xmlns:app="."
       navigatedTo="pageNavigatedTo">
-    <StackLayout>
-      <Label text="{{ title }}" textWrap="true" class="title"/>
-      <Label text="{{ description }}" textWrap="true" class="description" />
-      <ListView>
-         <ListView.itemTemplate>
-           <StackLayout>
-              <Label text="{{ title }}" textWrap="true" />
-              <Label text="{{ description }}" textWrap="true" />
-            </StackLayout >
-         </ListView.itemTemplate>
-       </ListView>
-    </StackLayout>
+    <GridLayout rows="auto, auto, *">
+        <Label text="{{ selectedItem.title }}"  class="title" textWrap="true" row="0"/>
+        <Label text="{{ selectedItem.description }}"  class="description" textWrap="true" row="1" />
+        <ListView items="{{dataItems}}" row="2" isScrolling="false">
+           <ListView.itemTemplate>
+             <StackLayout>
+                <Label text="{{  name }}" textWrap="true" class="speaker-name"/>
+                <Label text="{{ description }}" textWrap="true" class="speaker-description" />
+              </StackLayout >
+           </ListView.itemTemplate>
+        </ListView>
+    </GridLayout>
 </Page>

@@ -47,7 +47,7 @@ var JSDOSession = (function () {
         this.deferred = $.Deferred();
     }
     JSDOSession.prototype.login = function (username, password) {
-        var uri = this.settings.serviceURI + "login?loginName=" + username + "&password=" + password + "&custId=" + this.settings.custId + "&output=json";
+        var uri = "https://www.rollbase.com/rest/api/login?loginName=" + username + "&password=" + password + "&custId=" + this.settings.custId + "&output=json";
         var promise = httpModule.request({
             url: uri,
             headers: { "Content-Type": "application/json" }
@@ -66,12 +66,22 @@ var JSDOSession = (function () {
     };
     JSDOSession.prototype.fetch = function (name, filter) {
         /// TODO implement filter.
+        if (filter) {
+            var selectQuery = "SELECT * from " + name + "  WHERE " + Object.keys(filter).map(function (key) {
+                return key + "=" + filter[key];
+            }).join(" AND ");
+            filter = JSON.stringify({ "sqlQuery": selectQuery });
+        }
+        else {
+            filter = "";
+        }
         var record = {
-            filter: "",
-            objName: "Session5"
+            filter: filter,
+            objName: name
         };
-        var uri = "https://www.rollbase.com/rest/jsdo/selectQuery?" + queryString.stringify(record);
-        var basic = "Basic " + btoa(ROLLBASE_USER + "@" + CUSTOMER_ID + ":" + ROLLBASE_PASSWORD);
+        var uri = this.settings.serviceURI + "selectQuery?" + queryString.stringify(record);
+        var basic = "Basic " + btoa(ROLLBASE_USER + ":" + ROLLBASE_PASSWORD);
+        console.log(basic);
         var promise = httpModule.request({
             url: uri,
             headers: { "Authorization": basic }

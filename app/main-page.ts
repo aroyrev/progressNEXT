@@ -5,6 +5,7 @@ import view = require('ui/core/view');
 import progressModule = require('progress-jsdo');
 import BufferModule = require('buffer');
 import PromiseModule = require("node-promise");
+import detailModule = require("./details-view-model");
 
 export function pageLoaded(args) {
     var page = args.object;
@@ -32,5 +33,6 @@ export function pageLoaded(args) {
 
 export function listViewItemTap(args: listView.ItemEventData) {
     frameModule.topmost().navigate("details-page");
-    vmModule.mainViewModel.set("selectedItem", args.view.bindingContext);
+
+    detailModule.detailsViewModel.set("selectedItem", args.view.bindingContext);
 }

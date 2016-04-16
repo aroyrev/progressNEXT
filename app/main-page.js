@@ -1,6 +1,7 @@
 "use strict";
 var vmModule = require("./main-view-model");
 var frameModule = require('ui/frame');
+var detailModule = require("./details-view-model");
 function pageLoaded(args) {
     var page = args.object;
     //   if (page.ios) {
@@ -25,7 +26,7 @@ function pageLoaded(args) {
 exports.pageLoaded = pageLoaded;
 function listViewItemTap(args) {
     frameModule.topmost().navigate("details-page");
-    vmModule.mainViewModel.set("selectedItem", args.view.bindingContext);
+    detailModule.detailsViewModel.set("selectedItem", args.view.bindingContext);
 }
 exports.listViewItemTap = listViewItemTap;
 //# sourceMappingURL=main-page.js.map
