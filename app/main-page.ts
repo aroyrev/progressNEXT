@@ -1,10 +1,6 @@
 import vmModule = require("./main-view-model");
 import frameModule = require('ui/frame');
-import observableModule = require("data/observable");
 import view = require('ui/core/view');
-import progressModule = require('progress-jsdo');
-import BufferModule = require('buffer');
-import PromiseModule = require("node-promise");
 import detailModule = require("./details-view-model");
 
 export function pageLoaded(args) {

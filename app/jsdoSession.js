@@ -46,24 +46,6 @@ var JSDOSession = (function () {
         this.settings = settings;
         this.deferred = $.Deferred();
     }
-    JSDOSession.prototype.login = function (username, password) {
-        var uri = "https://www.rollbase.com/rest/api/login?loginName=" + username + "&password=" + password + "&custId=" + this.settings.custId + "&output=json";
-        var promise = httpModule.request({
-            url: uri,
-            headers: { "Content-Type": "application/json" }
-        });
-        var _this = this;
-        promise.then(function (result) {
-            var data = JSON.parse(result.content);
-            if (data.status === "ok") {
-                _this.sessionId = data.sessionId;
-                _this.deferred.resolve(data);
-            }
-        }, function (error) {
-            console.error(JSON.stringify(error));
-        });
-        return this.deferred.promise();
-    };
     JSDOSession.prototype.fetch = function (name, filter) {
         /// TODO implement filter.
         if (filter) {
